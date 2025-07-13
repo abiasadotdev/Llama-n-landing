@@ -1,0 +1,7 @@
+---
+const {variant = "bg-blue-700", textColor = "text-white", height = "h-12", width = "w-32", radius = "rounded-xl", Class} = Astro.props;
+---
+
+<button class={`${variant} ${textColor} ${height} ${width} ${radius} ${Class} hover:bg-blue-800 hover:duration-200`}>
+    <slot />
+</button>

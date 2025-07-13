@@ -1,0 +1,48 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+import Navbar from '../components/Navbar.astro';
+
+import Button from '../components/Button.astro';
+
+import Statistic from '../components/Statistic.astro';
+
+import FeatureCard from '../components/FeatureCard.astro';
+---
+
+<MainLayout title="Llama Network | Open Source Blockchain">
+    <div class="bg-gradient-to-t from-transparent to-slate-800 h-screen">
+        <Navbar />
+        <main class="px-8 py-10 mt-10">
+            <div class="flex flex-col justify-center items-center">
+                <h1 class="text-3xl krona-one-regular font-bold text-white text-center">Open Source and Public Blockchain</h1>
+                <p class="text-base font-norma text-white text-center mt-5">Llama Network is open source and public blockchain build for beginner blockchain developer.</p>
+                <Button Class="mt-8">Get Started</Button>
+            </div>
+            <p class="text-sm font-normal text-white mt-20 text-center">Below are statistic of Llama Network.</p>
+            <div class="flex justify-center gap-5 mt-10">
+                <Statistic icon="📦" title="183 Block mined." />
+                <Statistic icon="🧾" title="183 Transaction." />
+                <Statistic icon="🔌" title="183 Running node." />
+            </div>
+        </main>
+    </div>
+    <section class="px-8 py-20">
+        <h3 class="text-xl font-semibold text-white">What is Llama Network?</h3>
+        <p class="text-base font-normal text-white">Llama Network is open source and public blockchain build for beginner blockchain developer. Llama Network use Node JS Tecnologies and Socket IO for P2P network.</p>
+    </section>
+    <section class="px-8 py-20">
+        <h3 class="text-xl font-semibold text-white text-center">Why Llama Network?</h3>
+        <div class="flex flex-col justify-center items-center gap-10 mt-10">
+            <FeatureCard title="Secure" description="Llama Network use SHA256 for hashing on chain data." icon="🔒" />
+            <FeatureCard title="Secure" description="Llama Network use SHA256 for hashing on chain data." icon="🔒" />
+            <FeatureCard title="Secure" description="Llama Network use SHA256 for hashing on chain data." icon="🔒" />
+        </div>
+    </section>
+    <footer class="px-8 py-20">
+        <h3 class="text-2xl font-bold text-white">Llama Network</h3>
+        <p class="text-base font-normal text-white">Open source and public blockchain.</p>
+        <p class="text-xs font-normal text-white mt-10">© 2025 Abhiassa. All rights reserved.</p>
+    </footer>
+</MainLayout>
+
