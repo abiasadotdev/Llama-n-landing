@@ -15,3 +15,38 @@ body {
 .krona-one-regular {
   font-family: "Krona One", sans-serif;
 }
+
+.active > span:nth-child(1) {
+  width: 16px;
+  rotate: 50deg;
+  transform-origin: top left;
+  transition-duration: 200ms;
+}
+
+.active > span:nth-child(2) {
+  width: 16px;
+  rotate: -50deg;
+  transform-origin: bottom left;
+  transition-duration: 200ms;
+}
+
+h1 {
+  animation: text;
+  animation-duration: 3000ms;
+}
+
+.description {
+  animation: text;
+  animation-duration: 3000ms;
+  animation-delay: 500ms;
+  animation-fill-mode: both;
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

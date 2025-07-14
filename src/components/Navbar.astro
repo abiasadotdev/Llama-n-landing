@@ -1,16 +1,35 @@
 ---
 import HamburgerIcon from './HamburgerIcon.astro';
+
+import NavbarMenu from './NavbarMenu.astro'
 ---
 
-<nav class="flex justify-between items-center px-8 py-10">
+<nav id="navbar" class="flex justify-between items-center px-8 py-10">
     <div class="flex justify-start items-center">
         <a href="" class="text-xl font-semibold text-white">Llama Network</a>
     </div>
     <div class="flex justify-end items-center">
-        <button class="">
-            <HamburgerIcon />
+        <button id="menuButton" class="">
             <HamburgerIcon />
             <HamburgerIcon />
         </button>
     </div>
 </nav>
+
+<div id="hamburgerMenu" class="hidden absolute top-26 right-8 z-2 bg-white h-40 w-44 rounded-2xl p-5">
+    <NavbarMenu />
+</div>
+
+<script>
+    const hamburgerButton = document.getElementById('menuButton');
+
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+
+    hamburgerButton?.addEventListener('click', () => {
+        hamburgerButton.classList.toggle('active');
+
+        hamburgerMenu?.classList.toggle('flex');
+
+        hamburgerMenu?.classList.toggle('hidden');
+    });
+</script>
