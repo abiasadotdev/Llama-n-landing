@@ -1,8 +1,8 @@
 ---
-const links = Astro.props;
+const {links, Class} = Astro.props;
 ---
 
-<ul class="flex flex-col gap-2 lg:flex-row lg:gap-10">
+<ul class={`flex flex-col gap-2 ${Class} lg:flex-row lg:gap-10`}>
     <li><a href="#home" class="text-base font-medium text-black lg:text-white">Home</a></li>
     <li><a href="#about" class="text-base font-medium text-black lg:text-white">Whitepaper</a></li>
     <li><a href="" class="text-base font-medium text-black lg:text-white">Docs</a></li>
